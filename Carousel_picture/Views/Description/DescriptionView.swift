@@ -9,23 +9,29 @@ import SwiftUI
 
 struct DescriptionView: View {
     @State var keyword: String
+    @State var isPresentedView = false
     
     var body: some View {
         ZStack{
             Color(UIColor(red: 145/255, green: 145/255, blue: 145/255, alpha: 0.25))
                 .ignoresSafeArea()
-            VStack {
+            
+            VStack(spacing: 20) {
                 Text("Please do keyword search")
                     .font(.title)
-                    .padding(.top, 20)
+                    .padding(.top, 40)
+                
                 TextField("Enter keywords", text: $keyword)
                     .padding(.vertical, 12)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
                     .background(Color(UIColor(red: 145/255, green: 145/255, blue: 145/255, alpha: 0.3)))
                     .cornerRadius(10)
                     .keyboardType(.webSearch)
+                
                 Spacer()
-                Button(action: {}) {
+                
+                NavigationLink(destination: EmailView(email: "") ) {
+                    
                     Text("CONTINUE")
                         .fontWeight(.bold)
                         .foregroundColor(.white)
@@ -33,7 +39,9 @@ struct DescriptionView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color(.systemBlue))
                         .cornerRadius(15)
+                    
                 }
+                .padding(.top, 40)
             }
             .padding()
         }

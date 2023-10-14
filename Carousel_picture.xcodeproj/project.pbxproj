@@ -11,6 +11,8 @@
 		C89E368B2ADB23F900C83029 /* ColorZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E368A2ADB23F900C83029 /* ColorZone.swift */; };
 		C89E368D2ADB247D00C83029 /* SettingColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E368C2ADB247D00C83029 /* SettingColor.swift */; };
 		C89E368F2ADB2CE400C83029 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E368E2ADB2CE400C83029 /* DescriptionView.swift */; };
+		C89E36922ADB3EB400C83029 /* ResultSearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E36912ADB3EB400C83029 /* ResultSearchingView.swift */; };
+		C89E36952ADB412300C83029 /* EmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C89E36942ADB412300C83029 /* EmailView.swift */; };
 		C8E8917F2ADA9DBE00534E9A /* Carousel_pictureApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E8917E2ADA9DBE00534E9A /* Carousel_pictureApp.swift */; };
 		C8E891812ADA9DBE00534E9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E891802ADA9DBE00534E9A /* ContentView.swift */; };
 		C8E891832ADA9DC000534E9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8E891822ADA9DC000534E9A /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		C89E368A2ADB23F900C83029 /* ColorZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorZone.swift; sourceTree = "<group>"; };
 		C89E368C2ADB247D00C83029 /* SettingColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingColor.swift; sourceTree = "<group>"; };
 		C89E368E2ADB2CE400C83029 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
+		C89E36912ADB3EB400C83029 /* ResultSearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultSearchingView.swift; sourceTree = "<group>"; };
+		C89E36942ADB412300C83029 /* EmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailView.swift; sourceTree = "<group>"; };
 		C8E8917B2ADA9DBE00534E9A /* Carousel_picture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Carousel_picture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8E8917E2ADA9DBE00534E9A /* Carousel_pictureApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Carousel_pictureApp.swift; sourceTree = "<group>"; };
 		C8E891802ADA9DBE00534E9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -74,6 +78,22 @@
 				C89E368E2ADB2CE400C83029 /* DescriptionView.swift */,
 			);
 			path = Description;
+			sourceTree = "<group>";
+		};
+		C89E36932ADB410A00C83029 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				C89E36912ADB3EB400C83029 /* ResultSearchingView.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
+		C89E36962ADB412800C83029 /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				C89E36942ADB412300C83029 /* EmailView.swift */,
+			);
+			path = Email;
 			sourceTree = "<group>";
 		};
 		C8E891722ADA9DBE00534E9A = {
@@ -127,6 +147,8 @@
 				C89E36862ADB23A300C83029 /* HomePage */,
 				C89E36892ADB23C800C83029 /* Colorized */,
 				C89E36902ADB2CE900C83029 /* Description */,
+				C89E36962ADB412800C83029 /* Email */,
+				C89E36932ADB410A00C83029 /* Result */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -202,9 +224,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8E891932ADAAEC800534E9A /* PageControl.swift in Sources */,
+				C89E36922ADB3EB400C83029 /* ResultSearchingView.swift in Sources */,
 				C8E8918E2ADA9E8200534E9A /* Slide.swift in Sources */,
 				C89E368D2ADB247D00C83029 /* SettingColor.swift in Sources */,
 				C8E891952ADAB1E600534E9A /* CustomShape.swift in Sources */,
+				C89E36952ADB412300C83029 /* EmailView.swift in Sources */,
 				C8E891912ADAA3BF00534E9A /* HomeView.swift in Sources */,
 				C8E891812ADA9DBE00534E9A /* ContentView.swift in Sources */,
 				C89E368B2ADB23F900C83029 /* ColorZone.swift in Sources */,

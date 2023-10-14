@@ -14,6 +14,7 @@ struct ColorZone: View {
     
     var body: some View {
         ZStack{
+            
             Color(red: redValue / 255, green: greenValue / 255, blue: blueValue / 255)
                 .frame(height: 300)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
