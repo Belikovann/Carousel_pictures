@@ -8,16 +8,35 @@
 import SwiftUI
 
 struct ResultSearchingView: View {
+    @State var isPresentedView = false
+    
     var body: some View {
         VStack {
+            VStack {
+                
+                Text("🎉🎉🎉")
+                
+                Text("Your wishes have been taken into account. Please follow the instructions in the mail.")
+                    .padding()
+                    .multilineTextAlignment(.center)
+                
+            }
+            .font(.largeTitle)
             
-            Text("🎉🎉🎉")
-            
-            Text("Your wishes have been taken into account. Please follow the instructions in the mail.")
-                .padding()
-                .multilineTextAlignment(.center)
+            Button(action: {self.isPresentedView.toggle()}) {
+                Text("FINISH")
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .padding(.vertical, 18)
+                    .frame(maxWidth: .infinity)
+                    .background(Color(.systemBlue))
+                    .cornerRadius(15)
+            }
+            .fullScreenCover(isPresented: $isPresentedView) {
+                        HomeView()
+                    }
         }
-        .font(.largeTitle)
+        .padding()
     }
 }
 

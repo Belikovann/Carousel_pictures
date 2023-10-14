@@ -19,7 +19,7 @@ struct DescriptionView: View {
             VStack(spacing: 20) {
                 Text("Please do keyword search")
                     .font(.title)
-                    .padding(.top, 40)
+                    .padding(.top, 20)
                 
                 TextField("Enter keywords", text: $keyword)
                     .padding(.vertical, 12)

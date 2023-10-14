@@ -41,7 +41,7 @@ struct EmailView: View {
                             .background(Color(.systemBlue))
                             .cornerRadius(15)
                     }
-                    .sheet(isPresented: $isPresentedView) {
+                    .fullScreenCover(isPresented: $isPresentedView) {
                                 ResultSearchingView()
                             }
                 }
