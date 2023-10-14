@@ -16,10 +16,10 @@ struct Slide: Identifiable, Hashable {
 
 var slides = [
 
-    Slide(image: "p2", title: "Mountain"),
-    Slide(image: "p6", title: "Big Sur"),
-    Slide(image: "p5", title: "High Sierra"),
-    Slide(image: "p3", title: "Ocean"),
+    Slide(image: "p2", title: "Sunset"),
+    Slide(image: "p6", title: "Car park"),
+    Slide(image: "p5", title: "Family"),
+    Slide(image: "p3", title: "Home"),
     Slide(image: "p4", title: "Hills"),
     Slide(image: "p1", title: "Village")
     

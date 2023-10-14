@@ -25,14 +25,14 @@ struct HomeView: View {
             }
             .ignoresSafeArea()
             
-            VStack {
+            VStack(spacing: 5) {
                 
                 Text("Let`s enjoy")
                     .font(.title)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
-                Text("Slide")
+                Text("Slides")
                     .font(.largeTitle)
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
@@ -62,19 +62,20 @@ struct HomeView: View {
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.top, 10)
-                    
+                        .padding(.bottom)
                     // PageControl
                     
+
                     PageControl(maxPages: slides.count, currentPage: getIndex())
-                    
                 }
-                .padding()
+                .padding(.top)
                 .padding(.horizontal, 10)
-                .padding(.bottom, 5)
+                .padding(.bottom, 15)
                 .background(Color.white)
-                .clipShape(CustomShape())
+//                .clipShape(CustomShape())
                 .cornerRadius(10)
                 .padding(.horizontal, 20)
+                
                 
                 Button(action: {}) {
                     Text("GET STARTED")
@@ -88,8 +89,6 @@ struct HomeView: View {
                 .padding(.top, 30)
                 .padding(.horizontal)
             }
-            .padding()
-            
         }
     }
     

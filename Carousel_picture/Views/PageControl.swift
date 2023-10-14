@@ -22,7 +22,7 @@ struct PageControl: UIViewRepresentable {
         return control
     }
    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
+    func updateUIView(_ uiView: UIPageControl, context: Context) {
         
         uiView.currentPage = currentPage
     }
