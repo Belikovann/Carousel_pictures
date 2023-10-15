@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct DescriptionView: View {
-    @State var keyword: String
+    @State var keyword: String = ""
+    @State var keywords: [String] = []
     @State var isPresentedView = false
+    @State var errorAlert = false
     
     var body: some View {
         ZStack{
@@ -27,9 +29,35 @@ struct DescriptionView: View {
                     .background(Color(UIColor(red: 145/255, green: 145/255, blue: 145/255, alpha: 0.3)))
                     .cornerRadius(10)
                     .keyboardType(.webSearch)
+                    .overlay(
+                        Button(action: {
+                            if keyword.count >= 3 {
+                                keywords.append(keyword)
+                                keyword = ""
+                            } else {
+                                errorAlert = true
+                            }
+                        }) {
+                            Image(systemName: "magnifyingglass")
+                            //                                .padding(.leading, 300)
+                            
+                                .foregroundColor(.gray)
+                        }
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .padding()
+                    )
+                
+                ScrollView {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: .infinity)), GridItem(.adaptive(minimum: 190))], alignment: .leading, spacing: 1) {
+                        ForEach(keywords, id: \.self) { word in
+                            KeywordView(word: word)
+                        }
+                    }
+                }
+                
                 
                 Spacer()
-                
+                if !keywords.isEmpty {
                 NavigationLink(destination: EmailView(email: "") ) {
                     
                     Text("CONTINUE")
@@ -43,7 +71,13 @@ struct DescriptionView: View {
                 }
                 .padding(.top, 40)
             }
-            .padding()
+        }
+        .padding()
+            
+            .alert(isPresented: $errorAlert) {
+                Alert(title: Text("Please enter at least 3 symbols"),
+                      dismissButton: .default(Text("Ok"))
+            )}
         }
     }
 }

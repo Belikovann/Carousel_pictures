@@ -32,18 +32,21 @@ struct EmailView: View {
                         .cornerRadius(10)
                         .keyboardType(.emailAddress)
                     
-                    Button(action: {self.isPresentedView.toggle()}) {
-                        Text("CONTINUE")
-                            .fontWeight(.bold)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 18)
-                            .frame(maxWidth: .infinity)
-                            .background(Color(.systemBlue))
-                            .cornerRadius(15)
+                    if !email.isEmpty {
+                        Button(action: {self.isPresentedView.toggle()}) {
+                            Text("CONTINUE")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .padding(.vertical, 18)
+                                .frame(maxWidth: .infinity)
+                                .background(Color(.systemBlue))
+                                .cornerRadius(15)
+                        }
+                        
+                        .fullScreenCover(isPresented: $isPresentedView) {
+                            ResultSearchingView()
+                        }
                     }
-                    .fullScreenCover(isPresented: $isPresentedView) {
-                                ResultSearchingView()
-                            }
                 }
                 .padding()
             }
