@@ -4,7 +4,7 @@ App with simple design. The main idea of ​​the application is to collect use
 
 First screen shows custom slider of pictures. 
 
-https://github.com/Belikovann/Carousel_pictures/assets/123806593/ea4796f2-a37d-44ef-b4b1-d0c4fd6b13b5
+https://github.com/Belikovann/Carousel_pictures/assets/123806593/6fbd06a2-07ee-4d0b-bfda-9b234663be23
 
 Second screen contains zone with setting color. 
 
